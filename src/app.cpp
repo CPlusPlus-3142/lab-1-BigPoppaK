@@ -26,13 +26,13 @@ bool isPrime(int x)
 
 int closestPrime(int x)
 {
-    int closestNum;
-    for(int i = x-1; i > 1; i--){
-        if(isPrime(i)){
-            closestNum = i;
-        }
+    int closestNum = x++;
+    if(isPrime(closestNum)){
+        return closestNum;
     }
-    return closestNum;
+    else{
+        closestNum++;
+    }   
 }
 /** You should put in a main for testing, but then comment it out for submission.
  * The test.cpp file will include the main in your submission. You do not edit the test.cpp 
